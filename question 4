@@ -1,0 +1,22 @@
+class uber {
+  constructor(kms, passanger) {
+    this.kms = kms;
+    this.passanger = passanger;
+  }
+  calculatefare(kms, passanger) {
+    var subTotal = 0.0;
+    var pricePerFifthMile = 25;
+    var dropOffCharge = 5.0;
+    var overTwoPassengerCharge = 5.0;
+    var tripDistance = kms;
+    var passengers = passanger;
+    if (passengers > 2) {
+      subTotal = overTwoPassengerCharge(passengers - 2);
+    }
+    subTotal += parseInt(tripDistance) * pricePerFifthMile;
+    subTotal += dropOffCharge;
+    return subTotal.toFixed(2);
+  }
+}
+let trip1 = new uber(2, 2);
+console.log(trip1.calculatefare(2, 2));

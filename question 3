@@ -1,0 +1,14 @@
+class person{
+    constructor(name,age,email,phoneNo,city){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.phoneNo = phoneNo;
+        this.city=city;
+    }
+}
+let person1 = new person("soundarrajan","26","vssoundar1995@gmail.com",8870601548,"erode")
+console.log(person1)
+
+//output
+person {name: 'soundarrajan', age: '26', email: 'vssoundar1995@gmail.com', phoneNo: 8870601548, city: 'erode'}
